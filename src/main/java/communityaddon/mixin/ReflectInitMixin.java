@@ -1,4 +1,4 @@
-package com.example.addon.mixin;
+package communityaddon.mixin;
 
 import meteordevelopment.meteorclient.utils.ReflectInit;
 import net.fabricmc.api.EnvType;
