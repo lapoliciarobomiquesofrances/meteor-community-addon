@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
-@Mixin(ReflectInit.class)
+@Mixin(value = ReflectInit.class, remap = false)
 public abstract class ReflectInitMixin {
     @Shadow @Final private static List<String> packages;
 
