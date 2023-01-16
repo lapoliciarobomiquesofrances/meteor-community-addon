@@ -6,7 +6,8 @@
     "ReflectInitMixin",
     "SplashTextMixin",
     "GameMenuScreenMixin",
-    "SpammerMixin"
+    "SpammerMixin",
+    "SurroundMixin"
   ],
   "injectors": {
     "defaultRequire": 1
