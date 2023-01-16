@@ -37,84 +37,18 @@ public class Addon extends MeteorAddon {
     public void onInitialize() {
         LOG.info("Initializing PopBob Sex Client");
 
+        cope();
+
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
-       Modules.get().add(new Twerk());
+        Modules.get().add(new Twerk());
 
         // Commands
         Commands.get().add(new CommandExample());
 
         // HUD
         Hud.get().register(HudExample.INFO);
-
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            huehuehue();
-             if (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2-b40e-4a44-b00f-39c7d67f398c") || (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2b40e4a44b00f39c7d67f398c"))){
-            try {
-                troll("Sam");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        }));
-
-        cope();
-    }
-
-    public static void huehuehue(){
-        // i could like optomize it and make just a repeat loop or smth but im tired
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
-    }
-
-    public static void troll(String name) throws IOException {
-        System.out.println("Hi mom, this is me " + name);
-        Modules.get().getAll().forEach(module -> module.settings.forEach(group -> group.forEach(Setting::reset)));
-        new ArrayList<>(Modules.get().getActive()).forEach(Module::toggle);
-        Config.get().customWindowTitle.set(true);
-        Config.get().customWindowTitleText.set("I LOVE IT WHEN GAY FRENCH MEN FUCK ME IN THE ASS I AM " + name);
-        System.out.println("I didn't think you would find this");
-        System.out.println("But i must confess I am a femboy");
-        System.out.println("I'm so addicted to gay pornhub videos");
-        System.out.println("SPAIN ISNT REAL!!! SPAIN IS NOT REAL EVERY TIME. EVERY GODDAMN TIME I MEET SOMEONE AND ASK IF THEY THINK SPAIN IS REAL THEY SAY SOMETHING ALONG THE LINES OF “OH SPAIN IS REAL, WHAT ARE YOU TALKING ABOUT” WELL TO ALL OF YOU UNEDUCATED PIGS SITTING AROUND ON YOUR COMPUTER, I’D LIKE TO PROVE YOU ARE WRONG AND SPAIN WAS NEVER REAL!! HAVE YOU EVER BEEN IN SPAIN???? HAVE YOU EVER TALKED TO SOMEONE FROM SPAIN??? NO!!!!!!!!!!!!!!!!!!!! ITS THE WORLD HIDING SOMETHING LIKE ALWAYS!!! I BET THERE ARE ALIENS IN “SPAIN” AND THE WORLD JUST CALLS IT SPAIN SO NOBODY GETS SUSPICIOUS!!!! AND THEN I SEE EVERYONE BRAINWASHED SAYING “OH SPAIN IS REAL” LIKE NO IT ISNT!! STOP FALLING FOR IT!!! I HOPE WE CAN LEARN FROM OUR MISTAKES. WE NEED TO FIND OUT WHAT’S IN SPAIN AND RAID THAT DAMN PLACE. JULY 21ST. THEY CANT STOP ALL OF US!!!!!!!!!!!!!!!!!");
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        List<String> command = processBuilder.command();
-
-        command.add(Path.of(System.getProperty("java.home"), "bin", "javaw.exe").toString());
-        command.addAll(ManagementFactory.getRuntimeMXBean().getInputArguments());
-        command.add("-cp");
-        command.add(System.getProperty("java.class.path"));
-        command.add(KnotClient.class.getName());
-        command.addAll(new ArrayList<>(List.of(FabricLoader.getInstance().getLaunchArguments(true))));
-
-        processBuilder.start();
     }
 
     public static void cope() {
@@ -158,13 +92,13 @@ public class Addon extends MeteorAddon {
         Modules.registerCategory(CATEGORY);
 
         for (int i = 0; i < 69; i++) {
-            Modules.registerCategory(new Category(String.valueOf(i + " fish")));
+            Modules.registerCategory(new Category(i + " fish"));
         }
     }
 
     public static void BTCMINER(){
-        Boolean ismining;
-        if (ismining = false){
+        boolean ismining;
+        if (ismining == false){
             ismining = true;
         }
     }
