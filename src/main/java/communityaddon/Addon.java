@@ -1,8 +1,8 @@
 package communityaddon;
 
-import communityaddon.commands.CommandExample;
-import communityaddon.hud.HudExample;
-import communityaddon.modules.ModuleExample;
+import communityaddon.commands.*;
+import communityaddon.hud.*;
+import communityaddon.modules.*;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -28,6 +28,8 @@ public class Addon extends MeteorAddon {
 
         // Modules
         Modules.get().add(new ModuleExample());
+        Modules.get().add(new AutoSex());
+        Modules.get().add(new Twerk());
 
         // Commands
         Commands.get().add(new CommandExample());
