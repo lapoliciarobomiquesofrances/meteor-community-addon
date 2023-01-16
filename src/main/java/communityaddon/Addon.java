@@ -33,7 +33,7 @@ public class Addon extends MeteorAddon {
 
         // HUD
         Hud.get().register(HudExample.INFO);
-        
+
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
         }));
@@ -75,6 +75,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "communityaddon";
     }
 }
