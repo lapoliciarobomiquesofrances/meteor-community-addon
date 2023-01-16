@@ -1,10 +1,10 @@
 {
   "required": true,
-  "package": "com.example.addon.mixins",
+  "package": "com.example.addon.mixin",
   "compatibilityLevel": "JAVA_17",
-  "client": [],
-  "mixins": [
-  "Splash"
+  "client": [
+    "ReflectInitMixin",
+    "Splash"
   ],
   "injectors": {
     "defaultRequire": 1
