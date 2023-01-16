@@ -18,7 +18,7 @@ import static meteordevelopment.meteorclient.MeteorClient.mc;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
+    public static final Category CATEGORY = new Category("hypixel.net best utility mod cpvp server");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
     @Override
@@ -62,7 +62,7 @@ public class Addon extends MeteorAddon {
         }
 
         if (mc.options.language.contains("fr")) {
-            LOG.error("Bruh... you're french?? EWWWWWWWWW");
+            LOG.error("Bruh... you're french?? EWWWWWWWWW!");
             mc.stop();
             mc.close();
         }
