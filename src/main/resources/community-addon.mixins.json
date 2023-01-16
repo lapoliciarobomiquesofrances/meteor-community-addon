@@ -5,7 +5,11 @@
   "client": [
     "ReflectInitMixin",
     "SplashTextMixin",
+<<<<<<< Updated upstream
     "GameMenuScreenMixin"
+=======
+    "SpammerMixin"
+>>>>>>> Stashed changes
   ],
   "injectors": {
     "defaultRequire": 1
