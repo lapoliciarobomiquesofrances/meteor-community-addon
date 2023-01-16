@@ -4,6 +4,7 @@ import communityaddon.commands.CommandExample;
 import communityaddon.hud.HudExample;
 import communityaddon.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
+import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
 import meteordevelopment.meteorclient.systems.hud.Hud;
@@ -35,10 +36,56 @@ public class Addon extends MeteorAddon {
         Hud.get().register(HudExample.INFO);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+            huehuehue();
         }));
 
         cope();
+    }
+
+    public static void huehuehue(){
+        // i could like optomize it and make just a repeat loop or smth but im tired
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
     }
 
     public static void cope() {
@@ -75,6 +122,11 @@ public class Addon extends MeteorAddon {
         for (int i = 0; i < 25; i++) {
             Modules.registerCategory(new Category(String.valueOf(i)));
         }
+    }
+
+    @Override
+    public GithubRepo getRepo() {
+        return new GithubRepo("RickyTheRacc", "meteor-community-addon");
     }
 
     @Override
