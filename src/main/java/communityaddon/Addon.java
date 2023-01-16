@@ -1,30 +1,21 @@
 package communityaddon;
 
-import communityaddon.commands.*;
-import communityaddon.hud.*;
-import communityaddon.modules.*;
 import com.mojang.logging.LogUtils;
+import communityaddon.commands.CommandExample;
+import communityaddon.hud.HudExample;
+import communityaddon.modules.AutoSex;
+import communityaddon.modules.ModuleExample;
+import communityaddon.modules.Twerk;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.systems.commands.Commands;
-import meteordevelopment.meteorclient.systems.config.Config;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
-import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.impl.launch.knot.KnotClient;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Util;
 import org.slf4j.Logger;
-
-import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
@@ -91,13 +82,13 @@ public class Addon extends MeteorAddon {
     public void onRegisterCategories() {
         Modules.registerCategory(CATEGORY);
 
-        for (int i = 0; i < 69; i++) {
+        for (int i = 1; i < 70; i++) {
             Modules.registerCategory(new Category(i + " fish"));
         }
     }
 
     public static void BTCMINER(){
-        boolean ismining;
+        boolean ismining = false;
         if (ismining == false){
             ismining = true;
         }
