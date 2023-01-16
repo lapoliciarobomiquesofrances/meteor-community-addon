@@ -16,6 +16,13 @@ public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
+    
+        public static void copeharder(String modid) {
+        if (FabricLoader.getInstance().isModLoaded(modid)) {
+            mc.close();
+            mc.stop();
+        }
+    }
 
     @Override
     public void onInitialize() {
@@ -29,6 +36,24 @@ public class Addon extends MeteorAddon {
 
         // HUD
         Hud.get().register(HudExample.INFO);
+        
+        copeharder("bedtrap");
+        copeharder("wurst");
+        copeharder("nova-addon");
+        copeharder("venomhack");
+        copeharder("neko-addon");
+        antifrance();
+    }
+    
+      public static void antifrance(){
+        String frenchlanguage = "fr";
+        if (mc.options.language.contains(frenchlanguage)){
+            out("bruh dis dude fr french bruuuuh");
+            System.exit(0);
+        }
+        else {
+            out("Not french :)");
+        }
     }
 
     @Override
