@@ -1,6 +1,6 @@
-package com.example.addon.modules;
+package communityaddon.modules;
 
-import com.example.addon.Addon;
+import communityaddon.Addon;
 import meteordevelopment.meteorclient.systems.modules.Module;
 
 public class ModuleExample extends Module {

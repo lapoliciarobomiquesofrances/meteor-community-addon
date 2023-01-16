@@ -1,4 +1,4 @@
-package com.example.addon.commands;
+package communityaddon.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.systems.commands.Command;

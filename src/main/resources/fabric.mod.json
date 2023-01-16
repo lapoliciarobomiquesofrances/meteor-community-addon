@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "community-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "Meteor Community Addon",
+  "description": "A mod made by the Meteor Community. Think an anarchy server but as an addon.",
   "authors": [
-    "seasnail"
+    "everyone"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/RickyTheRacc/meteor-community-addon"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "communityaddon.Addon"
     ]
   },
   "mixins": [

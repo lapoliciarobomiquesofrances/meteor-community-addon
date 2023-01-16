@@ -1,8 +1,8 @@
-package com.example.addon;
+package communityaddon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import communityaddon.commands.CommandExample;
+import communityaddon.hud.HudExample;
+import communityaddon.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
@@ -10,19 +10,15 @@ import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
+
+import static meteordevelopment.meteorclient.MeteorClient.mc;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
-    
-        public static void copeharder(String modid) {
-        if (FabricLoader.getInstance().isModLoaded(modid)) {
-            mc.close();
-            mc.stop();
-        }
-    }
 
     @Override
     public void onInitialize() {
@@ -36,23 +32,34 @@ public class Addon extends MeteorAddon {
 
         // HUD
         Hud.get().register(HudExample.INFO);
-        
-        copeharder("bedtrap");
-        copeharder("wurst");
-        copeharder("nova-addon");
-        copeharder("venomhack");
-        copeharder("neko-addon");
-        antifrance();
+
+        cope();
     }
-    
-      public static void antifrance(){
-        String frenchlanguage = "fr";
-        if (mc.options.language.contains(frenchlanguage)){
-            out("bruh dis dude fr french bruuuuh");
-            System.exit(0);
+
+    public static void cope() {
+        FabricLoader loader = FabricLoader.getInstance();
+        String[] blacklist = new String[]{
+            "venomhack",
+            "bananaplus",
+            "nova-addon",
+            "wurst",
+            "bedtrap",
+            "vector"
+        };
+
+        for (String id : blacklist) {
+            if (loader.isModLoaded(id)) {
+                LOG.error("Don't use shit addons ezzzzz");
+                mc.stop();
+                mc.close();
+                break;
+            }
         }
-        else {
-            out("Not french :)");
+
+        if (mc.options.language.contains("fr")) {
+            LOG.error("Bruh... you're french?? EWWWWWWWWW");
+            mc.stop();
+            mc.close();
         }
     }
 
