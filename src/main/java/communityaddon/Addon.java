@@ -11,6 +11,7 @@ import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.util.Util;
 import org.slf4j.Logger;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
@@ -32,6 +33,10 @@ public class Addon extends MeteorAddon {
 
         // HUD
         Hud.get().register(HudExample.INFO);
+        
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
+        }));
 
         cope();
     }
