@@ -71,6 +71,10 @@ public class Addon extends MeteorAddon {
     @Override
     public void onRegisterCategories() {
         Modules.registerCategory(CATEGORY);
+
+        for (int i = 0; i < 25; i++) {
+            Modules.registerCategory(new Category(String.valueOf(i)));
+        }
     }
 
     @Override
