@@ -28,6 +28,7 @@ public class Addon extends MeteorAddon {
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
+        Modules.get().add(new Twerk());
 
         // Commands
         Commands.get().add(new CommandExample());
