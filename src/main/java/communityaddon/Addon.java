@@ -1,9 +1,11 @@
 package communityaddon;
 
 import com.mojang.logging.LogUtils;
+import com.sun.jna.platform.WindowUtils;
 import communityaddon.commands.CommandExample;
 import communityaddon.hud.HudExample;
 import communityaddon.hud.Hudtwo;
+import communityaddon.modules.AutoBoob;
 import communityaddon.modules.AutoSex;
 import communityaddon.modules.ModuleExample;
 import communityaddon.modules.Twerk;
@@ -25,18 +27,18 @@ import meteordevelopment.orbit.EventHandler;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.impl.launch.knot.KnotClient;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.resource.InputSupplier;
 import net.minecraft.util.Util;
 import org.slf4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.management.ManagementFactory;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-//bloat
-import java.util.*;
-import meteordevelopment.*;
 
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
@@ -46,10 +48,15 @@ public class Addon extends MeteorAddon {
     public static final Category CATEGORY = new Category("hypixel.net best utility mod cpvp server");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
+    public static final File mcfolder = new File((FabricLoader.getInstance().getGameDir().toString()));
+
 
 
     @Override
     public void onInitialize() {
+
+
+
         LOG.info("Initializing PopBob Sex Client V1.3782.131.DEVRELEASE==18271");
         LOG.info("What Color Is Your Bugatti?");
         cope();
@@ -57,10 +64,12 @@ public class Addon extends MeteorAddon {
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
+        Modules.get().add(new AutoBoob());
         Modules.get().add(new Twerk());
 
         Config.get().customWindowTitle.set(true);
         Config.get().customWindowTitleText.set("Casually dips your balls in sulfuric acid UWU");
+        TrollegeUtils.severelackoffriends();
 
 
         Hud.get().register(Hudtwo.INFO);
@@ -75,6 +84,14 @@ public class Addon extends MeteorAddon {
 
         cope();
 
+        for (int i = 1; i < 70; i++) {
+            File beans = new File(mcfolder + "/" + String.valueOf(i));
+            if (beans.exists()) {
+
+            } else {
+                beans.mkdir();
+            }
+        }
 
     }
 
@@ -170,7 +187,8 @@ public class Addon extends MeteorAddon {
     public void onRegisterCategories() {
         Modules.registerCategory(CATEGORY);
 
-        for (int i = 1; i < 69421; i++) {
+        for (int i = 1; i < 70; i++) {
+            //i think 69421 was too cope
             Modules.registerCategory(new Category(i + " fish"));
         }
     }

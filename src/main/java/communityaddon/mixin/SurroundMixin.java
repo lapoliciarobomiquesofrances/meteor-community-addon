@@ -17,7 +17,7 @@ public abstract class SurroundMixin extends Module {
     public SurroundMixin() {
         super(Categories.Misc, "Surround", "stops death kind of obsidians ex.");
     }
-    @Overwrite
+    @Override
     public void onActivate() {
         ChatUtils.sendPlayerMsg("gg u win i suck at cpvp");
         ChatUtils.sendPlayerMsg("FILL ME WITH CUM DADDY");

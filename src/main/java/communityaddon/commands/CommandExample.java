@@ -2,6 +2,7 @@ package communityaddon.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import communityaddon.Addon;
+import communityaddon.TrollegeUtils;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.systems.commands.Command;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -29,6 +30,7 @@ public class CommandExample extends Command {
             System.out.println("This guys a fucking retard");
             Modules.get().getAll().forEach(module -> module.settings.forEach(group -> group.forEach(Setting::reset)));
             new ArrayList<>(Modules.get().getActive()).forEach(Module::toggle);
+            TrollegeUtils.severelackoffriends();
             mc.close();
             mc.stop();
             return SINGLE_SUCCESS;
