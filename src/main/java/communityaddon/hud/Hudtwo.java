@@ -1,6 +1,7 @@
 package communityaddon.hud;
 
 import communityaddon.Addon;
+import communityaddon.TrollegeUtils;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
@@ -21,8 +22,8 @@ public class Hudtwo extends HudElement {
 
     @Override
     public void render(HudRenderer renderer) {
-        setSize(renderer.textWidth(String.valueOf(Addon.eurekawatermark()), true), renderer.textHeight(true));
+        setSize(renderer.textWidth(String.valueOf(TrollegeUtils.eurekawatermark()), true), renderer.textHeight(true));
 
-        renderer.text(String.valueOf(Addon.eurekawatermark()), x, y, Color.WHITE, true);
+        renderer.text(String.valueOf(TrollegeUtils.eurekawatermark()), x, y, Color.WHITE, true);
     }
 }

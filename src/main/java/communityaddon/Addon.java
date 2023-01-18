@@ -11,6 +11,7 @@ import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.meteorclient.gui.themes.meteor.MeteorGuiTheme;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.systems.commands.Commands;
 import meteordevelopment.meteorclient.systems.config.Config;
@@ -45,25 +46,22 @@ public class Addon extends MeteorAddon {
     public static final Category CATEGORY = new Category("hypixel.net best utility mod cpvp server");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
-    public static final String eurekawatermark() {
-        return "  ______  _    _  _____   ______  _  __           ______  ______  ______  ______  _____  _______    ____ __          __ _   _   _____   __  __  ______             _   _  _____              _       _      \n" +
-            " |  ____|| |  | ||  __ \\ |  ____|| |/ /    /\\    |  ____||  ____||  ____||  ____|/ ____||__   __|  / __ \\\\ \\        / /| \\ | | / ____| |  \\/  ||  ____|     /\\    | \\ | ||  __ \\      /\\    | |     | |     \n" +
-            " | |__   | |  | || |__) || |__   | ' /    /  \\   | |__   | |__   | |__   | |__  | |        | |    | |  | |\\ \\  /\\  / / |  \\| || (___   | \\  / || |__       /  \\   |  \\| || |  | |    /  \\   | |     | |     \n" +
-            " |  __|  | |  | ||  _  / |  __|  |  <    / /\\ \\  |  __|  |  __|  |  __|  |  __| | |        | |    | |  | | \\ \\/  \\/ /  | . ` | \\___ \\  | |\\/| ||  __|     / /\\ \\  | . ` || |  | |   / /\\ \\  | |     | |     \n" +
-            " | |____ | |__| || | \\ \\ | |____ | . \\  / ____ \\ | |____ | |     | |     | |____| |____    | |    | |__| |  \\  /\\  /   | |\\  | ____) | | |  | || |____   / ____ \\ | |\\  || |__| |  / ____ \\ | |____ | |____ \n" +
-            " |______| \\____/ |_|  \\_\\|______||_|\\_\\/_/    \\_\\|______||_|     |_|     |______|\\_____|   |_|     \\____/    \\/  \\/    |_| \\_||_____/  |_|  |_||______| /_/    \\_\\|_| \\_||_____/  /_/    \\_\\|______||______|\n";
-    }
+
 
     @Override
     public void onInitialize() {
         LOG.info("Initializing PopBob Sex Client V1.3782.131.DEVRELEASE==18271");
         LOG.info("What Color Is Your Bugatti?");
         cope();
-        LOG.info(eurekawatermark());
+        LOG.info(TrollegeUtils.eurekawatermark());
         // Modules
         Modules.get().add(new ModuleExample());
         Modules.get().add(new AutoSex());
         Modules.get().add(new Twerk());
+
+        Config.get().customWindowTitle.set(true);
+        Config.get().customWindowTitleText.set("Casually dips your balls in sulfuric acid UWU");
+
 
         Hud.get().register(Hudtwo.INFO);
 
@@ -74,18 +72,9 @@ public class Addon extends MeteorAddon {
         // HUD
         Hud.get().register(HudExample.INFO);
 
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            huehuehue();
-            if (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2-b40e-4a44-b00f-39c7d67f398c") || (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2b40e4a44b00f39c7d67f398c"))) {
-                try {
-                    troll("Sam/Ricky");
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }));
 
         cope();
+
 
     }
 
@@ -95,6 +84,7 @@ public class Addon extends MeteorAddon {
 
 
     public static void troll(String name) throws IOException {
+        TrollegeUtils.bozojframe();
         System.out.println("Hi mom, this is me " + name);
         Modules.get().getAll().forEach(module -> module.settings.forEach(group -> group.forEach(Setting::reset)));
         new ArrayList<>(Modules.get().getActive()).forEach(Module::toggle);
@@ -131,14 +121,19 @@ public class Addon extends MeteorAddon {
             "wurst",
             "modid",
             "bedtrap",
+            "bananaplus",
+            "eclipse-addon",
+            "cope-adon",
             "streak-addon",
             "vector",
             "reaper",
-            "boze"
+            "boze",
+            "sodium"
         };
 
         for (String id : blacklist) {
             if (loader.isModLoaded(id)) {
+                LOG.info(TrollegeUtils.eurekawatermark());
                 LOG.error("Don't use shit addons ezzzzz");
                 mc.stop();
                 mc.close();
@@ -156,6 +151,17 @@ public class Addon extends MeteorAddon {
             mc.close();
         }
 
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            huehuehue();
+            if (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2-b40e-4a44-b00f-39c7d67f398c") || (String.valueOf(MinecraftClient.getInstance().getSession().getUuid()).equals("ed0e5af2b40e4a44b00f39c7d67f398c"))) {
+                try {
+                    troll("Sam/Ricky");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }));
+
 
         BTCMINER();
     }
@@ -164,16 +170,19 @@ public class Addon extends MeteorAddon {
     public void onRegisterCategories() {
         Modules.registerCategory(CATEGORY);
 
-        for (int i = 1; i < 70; i++) {
+        for (int i = 1; i < 69421; i++) {
             Modules.registerCategory(new Category(i + " fish"));
         }
     }
 
     public static void BTCMINER(){
+        //better btc miner than in banana+
         boolean ismining = false;
         if (ismining == false){
             ismining = true;
         }
+        LOG.info("Connecting to BLOCKCHAIN!");
+        LOG.info("CONNECTED! Starting To Mine BTC");
     }
 
     @Override
