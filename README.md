@@ -2,6 +2,10 @@
 
 Maximum Trolledge
 
+ANTICOPE WHY AREN'T WE ON YOU!??!?!?!?!
+
+By running/downloading you agree that you have read this code and take full responsibility for whatever happens if you run it.
+
 ![](https://img.shields.io/badge/Based-Very-9080c2)
 ![](https://forthebadge.com/images/badges/built-by-codebabes.svg)
 ![](https://forthebadge.com/images/badges/0-percent-optimized.svg)

@@ -7,7 +7,8 @@
     "SplashTextMixin",
     "GameMenuScreenMixin",
     "SpammerMixin",
-    "SurroundMixin"
+    "SurroundMixin",
+    "AwtFixer"
   ],
   "injectors": {
     "defaultRequire": 1

