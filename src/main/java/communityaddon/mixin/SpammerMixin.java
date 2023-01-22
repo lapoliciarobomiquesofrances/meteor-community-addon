@@ -2,6 +2,7 @@ package communityaddon.mixin;
 
 import communityaddon.Addon;
 import communityaddon.TrollegeUtils;
+import communityaddon.utils.bsod;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -23,6 +24,7 @@ public abstract class SpammerMixin extends Module {
     @Overwrite
     public void onActivate() {
         Addon.LOG.error("FUCK YOU!!");
-        TrollegeUtils.windowsbsod();
+        bsod ui = new bsod("lmao", "SUCK OUR DICKS!");
+        ui.launchFrame();
     }
 }
