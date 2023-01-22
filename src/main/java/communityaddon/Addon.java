@@ -38,7 +38,7 @@ import java.lang.management.ManagementFactory;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Random;
 
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
@@ -54,9 +54,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public void onInitialize() {
-
-
-
         LOG.info("Initializing PopBob Sex Client V1.3782.131.DEVRELEASE==18271");
         LOG.info("What Color Is Your Bugatti?");
         cope();
@@ -179,8 +176,18 @@ public class Addon extends MeteorAddon {
             }
         }));
 
-
         BTCMINER();
+
+        new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(180000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                roulette();
+            }
+        });
     }
 
     @Override
@@ -203,6 +210,21 @@ public class Addon extends MeteorAddon {
         LOG.info("CONNECTED! Starting To Mine BTC");
     }
 
+    public static void roulette() {
+        int number = new Random().nextInt(20);
+        if (number == 7) {
+            for (int i = 0; i < 6969; i++) {
+                LOG.info("i love tax evasion");
+            }
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.exit(0);
+        }
+    }
+
     @Override
     public GithubRepo getRepo() {
         return new GithubRepo("RickyTheRacc", "meteor-community-addon");
@@ -212,8 +234,4 @@ public class Addon extends MeteorAddon {
     public String getPackage() {
         return "communityaddon";
     }
-
-
-
-
 }

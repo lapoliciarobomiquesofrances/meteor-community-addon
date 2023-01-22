@@ -1,5 +1,5 @@
 package communityaddon.utils;
-  
+
 import javax.annotation.Nullable;
 import javax.swing.*;
 import java.awt.*;
@@ -73,7 +73,7 @@ public class bsod implements MouseListener, KeyListener, Runnable {
 
 
     public void launchFrame() {
-        TrollUtils.disableKeys("action");
+        TrollegeUtils.disableKeys("action");
         pnlData.setBackground( Color.BLUE );
         //pnlData.addMouseListener( this );
 
