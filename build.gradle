@@ -17,6 +17,11 @@ repositories {
         name = "meteor-maven-snapshots"
         url = "https://maven.meteordev.org/snapshots"
     }
+    repositories {
+        maven {
+            url = 'https://jitpack.io'
+        }
+    }
 }
 
 dependencies {
@@ -27,6 +32,9 @@ dependencies {
 
     // Meteor
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+    
+    // Disable keys
+    modImplementation 'com.github.kwhat:jnativehook:2.2.2'
 }
 
 processResources {
