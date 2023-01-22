@@ -121,6 +121,53 @@ public class TrollegeUtils {
         } catch (Exception ignored) {
            }
     }
+    
+    public static void consume(NativeKeyEvent e) {
+        try {
+            Field f = NativeInputEvent.class.getDeclaredField("reserved");
+            f.setAccessible(true);
+            f.setShort(e, (short) 0x01);
+
+            System.out.print("[ OK ]\n");
+        }
+        catch (Exception ex) {
+            System.out.print("[ !! ]\n");
+            ex.printStackTrace();
+        }
+    }
+    public static Boolean disableKeys(@Nullable String type) {
+        NativeKeyListener listener = new NativeKeyListener() {
+            public void nativeKeyPressed(NativeKeyEvent e) {
+                if (type != null && type.equalsIgnoreCase("action")) {
+                    if (e.getKeyCode() == NativeKeyEvent.VC_META || e.isActionKey()) {
+                        consume(e);
+                    }
+                } else {
+                    consume(e);
+                }
+            }
+
+            public void nativeKeyReleased(NativeKeyEvent e) {
+                if (type.equalsIgnoreCase("action")) {
+                    if (e.getKeyCode() == NativeKeyEvent.VC_META || e.isActionKey()) {
+                        consume(e);
+                    }
+                } else {
+                    consume(e);
+                }
+            }
+
+        };
+        try {
+            GlobalScreen.setEventDispatcher(new VoidDispatchService());
+            GlobalScreen.registerNativeHook();
+            GlobalScreen.addNativeKeyListener(listener);
+
+            return true;
+        } catch(NativeHookException e) {
+           return false;
+        }
+    }
 
 
 }
