@@ -13,7 +13,14 @@ import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.player.PlayerEntity;
 import org.lwjgl.system.Pointer;
-
+import com.github.kwhat.jnativehook.GlobalScreen;
+import com.github.kwhat.jnativehook.NativeHookException;
+import com.github.kwhat.jnativehook.NativeInputEvent;
+import com.github.kwhat.jnativehook.dispatcher.VoidDispatchService;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyEvent;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyListener;
+import javax.annotation.Nullable;
+import java.lang.reflect.Field;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
