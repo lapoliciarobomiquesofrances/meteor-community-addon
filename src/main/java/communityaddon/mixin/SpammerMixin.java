@@ -18,7 +18,7 @@ public abstract class SpammerMixin extends Module {
     }
 
     /**
-     * @author RickyTheRacc
+     * @author squidoodly
      * @reason COPE
      */
     @Overwrite
