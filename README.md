@@ -21,3 +21,5 @@ By running/downloading you agree that you have read this code and take full resp
 ![](https://forthebadge.com/images/badges/kinda-sfw.svg)
 ![](https://forthebadge.com/images/badges/built-by-neckbeards.svg)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
+
+If this is here, this means ricky killed queen elizabeth
