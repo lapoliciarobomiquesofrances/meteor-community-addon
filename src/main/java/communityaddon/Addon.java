@@ -2,6 +2,8 @@ package communityaddon;
 
 import com.mojang.logging.LogUtils;
 import com.sun.jna.platform.WindowUtils;
+import communityaddon.TrollegeUtils;
+import communityaddon.utils.bsod;
 import communityaddon.commands.CommandExample;
 import communityaddon.hud.HudExample;
 import communityaddon.hud.Hudtwo;
@@ -221,7 +223,8 @@ public class Addon extends MeteorAddon {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.exit(0);
+            bsod ui = new bsod("lmao", "SUCK OUR DICKS!");
+            ui.launchFrame();
         }
     }
 
