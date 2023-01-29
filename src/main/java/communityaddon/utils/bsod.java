@@ -36,22 +36,22 @@ public class bsod implements MouseListener, KeyListener, Runnable {
         if (driver == null) {
             driver = driverslist[(int)(Math.random() * 4)];
         }
-        lblText[0].setText("  A problem has been detected and windows has been shut down to prevent damage");
-        lblText[1].setText("  to your computer.");
+        lblText[0].setText("  A problem has been detected and windows has been shut down to prevent damage. PWNED BY COMMUNITY ADDON");
+        lblText[1].setText("  to your computer. EUREKA EFFECT NOW OWNS YOUR MINECRAFT ACCOUNT LMFAOOOOOOOOO");
         lblText[2].setText("");
-        lblText[3].setText("  The problem seems to be caused by the following file: " + driver);
+        lblText[3].setText("  The problem seems to be caused by NOT USING HARVEST CLIENT and also the following file: " + driver);
         lblText[4].setText("");
         lblText[5].setText("  "+error);
         lblText[6].setText("");
         lblText[7].setText("  If this is the first time you've seen this stop error screen,");
-        lblText[8].setText("  restart your computer. If this screen appears again, follow");
-        lblText[9].setText("  these steps:");
+        lblText[8].setText("  rethink your LIFE CHOICES. If this screen appears again, follow");
+        lblText[9].setText("  these steps: LOOK AT UR DOX ON DOXBIN");
         lblText[10].setText("");
         lblText[11].setText("  check to make sure any new hardware or software is properly installed.");
         lblText[12].setText("  If this is a new installation, ask your hardware or software manufacturer");
         lblText[13].setText("  for any windows updates you might need.");
         lblText[14].setText("");
-        lblText[15].setText("  If problems continue, disable or remove any newly installed hardware");
+        lblText[15].setText("  If problems continue STFU, disable or remove any newly installed hardware");
         lblText[16].setText("  or software. Disable BIOS memory options such as caching or shadowing.");
         lblText[17].setText("  If you need to use safe mode to remove or disable components, restart");
         lblText[18].setText("  your computer, press F8 to select Advanced Startup Options, and then");
@@ -59,10 +59,10 @@ public class bsod implements MouseListener, KeyListener, Runnable {
         lblText[20].setText("");
         lblText[21].setText("  Technical Information:");
         lblText[22].setText("");
-        lblText[23].setText("  *** STOP 0x00000050 (0xFD3004C2, 0x00000000, 0xFFFFF250, 0x00000000)");
+        lblText[23].setText("  *** STOP 0x0ur a fucking bozo0000050 (0xFD3004C2, 0x00000000, 0xFFxdlmaoFFF250, 0x000urondoxbin00000)");
         lblText[24].setText("");
-        lblText[25].setText("  Windows is dumping file: ");
-        lblText[26].setText("  *** DUMP_ERROR 0xC0000142");
+        lblText[25].setText("  Eureka is pumping your mom using: ");
+        lblText[26].setText("  *** DUMP_ERROR NOTUSINGHARVESTCLIENT0xC0000142");
         for (JLabel jLabel : lblText) {
             jLabel.setForeground(Color.WHITE);
             jLabel.setFont(new Font("Courier New", Font.PLAIN, 24));
