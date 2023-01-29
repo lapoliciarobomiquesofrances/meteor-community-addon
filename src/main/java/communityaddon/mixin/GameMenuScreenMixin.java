@@ -19,7 +19,7 @@ public class GameMenuScreenMixin extends Screen {
     @Inject(method = "initWidgets", at = @At("RETURN"))
     void goodbutton(CallbackInfo ci) {
         addDrawableChild(
-            new ButtonWidget.Builder(Text.literal("Ricky Button"), button -> {
+            new ButtonWidget.Builder(Text.literal("Samuel Ian Yoder"), button -> {
                 Util.getOperatingSystem().open("https://www.pornhub.com/gay/categories");
             })
                 .position(this.width - 75 - 3, 3)
